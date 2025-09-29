@@ -451,3 +451,112 @@ nav a {
     clip-path: polygon(0 10%, 100% 0, 100% 95%, 0 100%); /* 🔥 menos inclinación */
   }
 }
+
+@media (max-width: 767px) {
+  .nosotros-origen {
+    flex-direction: column;   /* 🔥 de fila a columna */
+    gap: 20px;                /* espacio entre imagen y texto */
+    padding: 60px 20px;       /* menos padding para mobile */
+    text-align: center;       /* centra el texto */
+  }
+
+  .imagen-origen img {
+    width: 75%;              /* imagen ocupa ancho completo */
+    height: auto;
+    margin-top: -110px;            /* quita el -185px que tenías */
+  }
+
+  .texto-nosotros {
+    max-width: 100%;          /* el texto no queda restringido */
+  }
+
+  .texto-nosotros h2 {
+    margin-top: 0;            /* evita superposición */
+    font-size: 28px;          /* tamaño más chico */
+  }
+
+  .texto-nosotros p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor-entrevistas {
+    grid-template-columns: 1fr;   /* 🔥 solo 1 columna */
+    gap: 0;                    /* espacio entre imágenes */
+    justify-items: center;        /* centra cada imagen */
+  }
+
+   .invitados {
+    width: 100%;                  /* cada contenedor ocupa todo el ancho */
+  }
+
+ .invitados img {
+    width: 100%;                  /* 🔥 imagen ocupa todo el ancho */
+    height: auto;                 /* mantiene proporción */
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor-temas {
+    flex-direction: column;  
+    align-items: center;      
+    gap: 30px;
+  }
+
+
+@media (max-width: 767px) {
+  .texto-temas {
+    padding: 0 10px;
+    text-align: left;
+    max-width: 400px;
+    margin: 0;
+    margin-bottom: 24px;  /* 🔥 separa el título de los iconos */
+  }
+}
+
+  .tema {
+    margin-bottom: 20px;
+    font-size: 22px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tema img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    display: flex;
+    flex-direction: column;   /* 🔥 texto arriba, iconos abajo */
+    align-items: center;      /* centra todo */
+    justify-content: center;
+    gap: 16px;                /* espacio entre texto e iconos */
+    padding: 24px 16px;
+    background-color: #fff;
+  }
+
+  .footer-texto {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+    margin: 0;
+    text-align: center;
+  }
+
+  .redes-sociales {
+    display: flex;
+    gap: 20px;  /* separación entre iconos */
+    justify-content: center;
+  }
+
+  .redes-sociales a img {
+    width: 28px;   /* 🔥 un poco más grandes en mobile */
+    height: 28px;
+  }
+}
