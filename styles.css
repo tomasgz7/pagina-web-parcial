@@ -3,7 +3,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Logo del navbar */
+/*Logo del navbar*/
+
 .logo {
     background-color: #0000CA;
     color: white;
@@ -16,6 +17,7 @@ body {
 }
 
 /*Navbar*/
+
 header {
   position: fixed;
   top: 0;
@@ -103,7 +105,6 @@ nav a.is-active {
     background-color: #00F3BB;
     text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 600;
     font-size: 18px;
     color: #060A24;
     letter-spacing: 0;
@@ -123,7 +124,6 @@ nav a.is-active {
 #episodios {
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   color: #fff;
-  /* mantiene tu padding y recorte diagonal */
   padding: 140px 40px;
   clip-path: polygon(0 20%, 100% 0, 100% 89%, 0 100%);
   width: 100%;
@@ -150,7 +150,6 @@ nav a.is-active {
   margin: 0 auto;
 }
 
-
 .episodio iframe {
   width: 100%;
   border-radius: 12px;
@@ -158,7 +157,8 @@ nav a.is-active {
   border: 0;
 }
 
-/* Sección de Nosotros */
+/*Nosotros*/
+
 .nosotros-origen {
   display: flex;
   align-items: center;
@@ -309,6 +309,7 @@ nav a.is-active {
 }
 
 /*Footer con Redes sociales*/
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -340,7 +341,6 @@ footer {
   display: none;
 }
 
-/* Ícono hamburguesa */
 .menu-icon {
   display: inline-block;
   width: 30px;
@@ -350,13 +350,11 @@ footer {
   cursor: pointer;
 }
 
-/* Ícono cerrar */
 .menu-hamburguesa:checked + .menu-icon {
   background: url("images/menu/icono-cerrar.svg") no-repeat center;
   background-size: contain;
 }
 
-/* NAV oculto en mobile */
 nav {
   display: none;
   flex-direction: column;
@@ -372,12 +370,10 @@ nav {
   box-sizing: border-box;
 }
 
-/* NAV abierto en mobile */
 .menu-hamburguesa:checked ~ nav {
   display: flex;
 }
 
-/* Links mobile */
 nav a {
   color: #fff;
   text-decoration: none;
@@ -386,44 +382,15 @@ nav a {
   width: 100%;
 }
 
-@media (max-width: 767px) {
-  .episodios-contenedor {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-}
+/* Modo responsivo*/
 
-/* Desktop */
-@media (min-width: 768px) {
-  .menu-icon {
-    display: none;
-  }
-
-  nav {
-    display: flex !important;
-    flex-direction: row;
-    position: static;
-    gap: 48px;
-    background: none;
-    width: auto;
-    height: auto;
-    padding: 0;
-  }
-
-  nav a {
-    color: #060A24;
-    font-size: 16px;
-  }
-}
 @media (max-width: 767px) {
   .texto-bio {
-    margin-left: 0;       /* Quita margen lateral */
-    padding: 20px;    
-    line-height: 1.2;    /* Más cómodo en pantallas chicas */
-    text-align: left; 
-    margin-top: 100px;    /* Mantiene alineación */
+    margin-left: 0;
+    padding: 20px;
+    margin-top: 100px;    
+    text-align: left;
+    line-height: 1.2;
   }
 
   .texto-bio h1 {
@@ -438,84 +405,85 @@ nav a {
 
   .boton {
     display: block;
-    width: 100%;          /* Botón ancho completo */
+    width: 100%;           
     text-align: center;
     padding: 14px 0;
     margin-top: 20px;
   }
-}
 
-@media (max-width: 767px) {
+  /* Episodio responsivo */
   #episodios {
-    padding: 80px 20px; /* menos padding en pantallas chicas */
-    clip-path: polygon(0 10%, 100% 0, 100% 95%, 0 100%); /* 🔥 menos inclinación */
+    padding: 80px 20px;
+    clip-path: polygon(0 10%, 100% 0, 100% 95%, 0 100%);
   }
-}
 
-@media (max-width: 767px) {
+  .episodios-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  /* Nosotros responsivo */
   .nosotros-origen {
-    flex-direction: column;   /* 🔥 de fila a columna */
-    gap: 20px;                /* espacio entre imagen y texto */
-    padding: 60px 20px;       /* menos padding para mobile */
-    text-align: center;       /* centra el texto */
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 20px;
+    text-align: center;
   }
 
   .imagen-origen img {
-    width: 75%;              /* imagen ocupa ancho completo */
+    width: 75%;
     height: auto;
-    margin-top: -110px;            /* quita el -185px que tenías */
+    margin-top: -110px;
   }
 
   .texto-nosotros {
-    max-width: 100%;          /* el texto no queda restringido */
+    max-width: 100%;
   }
 
   .texto-nosotros h2 {
-    margin-top: 0;            /* evita superposición */
-    font-size: 28px;          /* tamaño más chico */
+    margin-top: 0;
+    font-size: 28px;
   }
 
   .texto-nosotros p {
     font-size: 14px;
     line-height: 22px;
   }
-}
 
-@media (max-width: 767px) {
+  /*Entrevistas responsivo*/
+
   .contenedor-entrevistas {
-    grid-template-columns: 1fr;   /* 🔥 solo 1 columna */
-    gap: 0;                    /* espacio entre imágenes */
-    justify-items: center;        /* centra cada imagen */
+    grid-template-columns: 1fr;
+    gap: 0;
+    justify-items: center;
   }
 
-   .invitados {
-    width: 100%;                  /* cada contenedor ocupa todo el ancho */
+  .invitados {
+    width: 100%;
   }
 
- .invitados img {
-    width: 100%;                  /* 🔥 imagen ocupa todo el ancho */
-    height: auto;                 /* mantiene proporción */
+  .invitados img {
+    width: 100%;
+    height: auto;
     display: block;
   }
-}
 
-@media (max-width: 767px) {
-  .contenedor-temas {
-    flex-direction: column;  
-    align-items: center;      
-    gap: 30px;
-  }
-
-
-@media (max-width: 767px) {
+  /*Tópicos responsivo*/
   .texto-temas {
     padding: 0 10px;
     text-align: left;
     max-width: 400px;
     margin: 0;
-    margin-bottom: 24px;  /* 🔥 separa el título de los iconos */
+    margin-bottom: 24px;
   }
-}
+
+  .contenedor-temas {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
   .tema {
     margin-bottom: 20px;
@@ -527,16 +495,16 @@ nav a {
   .tema img {
     width: 100px;
     height: 100px;
+    margin-bottom: 24px; 
   }
-}
 
-@media (max-width: 767px) {
+  /* Footer responsivo */
   footer {
     display: flex;
-    flex-direction: column;   /* 🔥 texto arriba, iconos abajo */
-    align-items: center;      /* centra todo */
+    flex-direction: column;  
+    align-items: center;
     justify-content: center;
-    gap: 16px;                /* espacio entre texto e iconos */
+    gap: 16px;
     padding: 24px 16px;
     background-color: #fff;
   }
@@ -551,12 +519,12 @@ nav a {
 
   .redes-sociales {
     display: flex;
-    gap: 20px;  /* separación entre iconos */
+    gap: 20px;
     justify-content: center;
   }
 
   .redes-sociales a img {
-    width: 28px;   /* 🔥 un poco más grandes en mobile */
+    width: 28px;
     height: 28px;
   }
 }
