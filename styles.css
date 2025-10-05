@@ -101,13 +101,11 @@ nav a.is-active {
     display: inline-block;
     padding: 16px 60px;
     font-weight: 700;
-    color: black;
+    color: #060A24;
     background-color: #00F3BB;
     text-decoration: none;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 18px;
-    color: #060A24;
-    letter-spacing: 0;
     text-align: center;
     line-height: 24px;
     cursor: pointer;
@@ -374,6 +372,8 @@ nav {
   display: flex;
 }
 
+
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -526,5 +526,30 @@ nav a {
   .redes-sociales a img {
     width: 28px;
     height: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .menu-hamburguesa {
+    display: none;
+  }
+
+  nav {
+    display: flex;             
+    position: static;           
+    flex-direction: row;       
+    background: transparent;    
+    width: auto;
+    height: auto;
+    gap: 48px;                  
+    padding: 0;
+  }
+
+  nav a {
+    color: #060A24;            
   }
 }
